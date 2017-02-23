@@ -30,12 +30,12 @@ public:
     tsDeBoorNet* data();
 
     /* C++11 features */
-#ifndef TINYSPLINE_DISABLE_CXX11_FEATURES
-    DeBoorNet(DeBoorNet&& other);
-    DeBoorNet& operator=(DeBoorNet&& other);
-    void swap(DeBoorNet& other);
-    friend void swap(DeBoorNet &left, DeBoorNet &right) { left.swap(right); }
-#endif
+// #ifndef TINYSPLINE_DISABLE_CXX11_FEATURES
+//     DeBoorNet(DeBoorNet&& other);
+//     DeBoorNet& operator=(DeBoorNet&& other);
+//     void swap(DeBoorNet& other);
+//     friend void swap(DeBoorNet &left, DeBoorNet &right) { left.swap(right); }
+// #endif
 
 private:
     tsDeBoorNet deBoorNet;
@@ -81,12 +81,12 @@ public:
     BSpline derive() const;
 
     /* C++11 features */
-#ifndef TINYSPLINE_DISABLE_CXX11_FEATURES
-    BSpline(BSpline&& other);
-    BSpline& operator=(BSpline&& other);
-    void swap(BSpline& other);
-    friend void swap(BSpline &left, BSpline &right) { left.swap(right); }
-#endif
+// #ifndef TINYSPLINE_DISABLE_CXX11_FEATURES
+//     BSpline(BSpline&& other);
+//     BSpline& operator=(BSpline&& other);
+//     void swap(BSpline& other);
+//     friend void swap(BSpline &left, BSpline &right) { left.swap(right); }
+// #endif
 
 private:
     tsBSpline bspline;

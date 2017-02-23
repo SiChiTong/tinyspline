@@ -82,36 +82,36 @@ tsDeBoorNet* ts::DeBoorNet::data()
     return &deBoorNet;
 }
 
-#ifndef TINYSPLINE_DISABLE_CXX11_FEATURES
-ts::DeBoorNet::DeBoorNet(DeBoorNet&& other)
-{
-    ts_deboornet_default(&deBoorNet);
-    swap(other);
-}
+// #ifndef TINYSPLINE_DISABLE_CXX11_FEATURES
+// ts::DeBoorNet::DeBoorNet(DeBoorNet&& other)
+// {
+//     ts_deboornet_default(&deBoorNet);
+//     swap(other);
+// }
 
-ts::DeBoorNet& ts::DeBoorNet::operator=(ts::DeBoorNet&& other)
-{
-    if (&other != this) {
-        ts_deboornet_free(&deBoorNet);
-        swap(other);
-    }
-    return *this;
-}
+// ts::DeBoorNet& ts::DeBoorNet::operator=(ts::DeBoorNet&& other)
+// {
+//     if (&other != this) {
+//         ts_deboornet_free(&deBoorNet);
+//         swap(other);
+//     }
+//     return *this;
+// }
 
-void ts::DeBoorNet::swap(ts::DeBoorNet& other)
-{
-    if (&other != this) {
-        std::swap(deBoorNet.u, other.deBoorNet.u);
-        std::swap(deBoorNet.k, other.deBoorNet.k);
-        std::swap(deBoorNet.s, other.deBoorNet.s);
-        std::swap(deBoorNet.h, other.deBoorNet.h);
-        std::swap(deBoorNet.dim, other.deBoorNet.dim);
-        std::swap(deBoorNet.n_points, other.deBoorNet.n_points);
-        std::swap(deBoorNet.points, other.deBoorNet.points);
-        std::swap(deBoorNet.result, other.deBoorNet.result);
-    }
-}
-#endif
+// void ts::DeBoorNet::swap(ts::DeBoorNet& other)
+// {
+//     if (&other != this) {
+//         std::swap(deBoorNet.u, other.deBoorNet.u);
+//         std::swap(deBoorNet.k, other.deBoorNet.k);
+//         std::swap(deBoorNet.s, other.deBoorNet.s);
+//         std::swap(deBoorNet.h, other.deBoorNet.h);
+//         std::swap(deBoorNet.dim, other.deBoorNet.dim);
+//         std::swap(deBoorNet.n_points, other.deBoorNet.n_points);
+//         std::swap(deBoorNet.points, other.deBoorNet.points);
+//         std::swap(deBoorNet.result, other.deBoorNet.result);
+//     }
+// }
+// #endif
 
 
 /********************************************************
@@ -314,35 +314,35 @@ ts::BSpline ts::BSpline::derive() const
     return bs;
 }
 
-#ifndef TINYSPLINE_DISABLE_CXX11_FEATURES
-ts::BSpline::BSpline(ts::BSpline&& other)
-{
-    ts_bspline_default(&bspline);
-    swap(other);
-}
+// #ifndef TINYSPLINE_DISABLE_CXX11_FEATURES
+// ts::BSpline::BSpline(ts::BSpline&& other)
+// {
+//     ts_bspline_default(&bspline);
+//     swap(other);
+// }
 
-ts::BSpline& ts::BSpline::operator=(ts::BSpline&& other)
-{
-    if (&other != this) {
-        ts_bspline_free(&bspline);
-        swap(other);
-    }
-    return *this;
-}
+// ts::BSpline& ts::BSpline::operator=(ts::BSpline&& other)
+// {
+//     if (&other != this) {
+//         ts_bspline_free(&bspline);
+//         swap(other);
+//     }
+//     return *this;
+// }
 
-void ts::BSpline::swap(ts::BSpline &other)
-{
-    if (&other != this) {
-        std::swap(bspline.deg, other.bspline.deg);
-        std::swap(bspline.order, other.bspline.order);
-        std::swap(bspline.dim, other.bspline.dim);
-        std::swap(bspline.n_ctrlp, other.bspline.n_ctrlp);
-        std::swap(bspline.n_knots, other.bspline.n_knots);
-        std::swap(bspline.ctrlp, other.bspline.ctrlp);
-        std::swap(bspline.knots, other.bspline.knots);
-    }
-}
-#endif
+// void ts::BSpline::swap(ts::BSpline &other)
+// {
+//     if (&other != this) {
+//         std::swap(bspline.deg, other.bspline.deg);
+//         std::swap(bspline.order, other.bspline.order);
+//         std::swap(bspline.dim, other.bspline.dim);
+//         std::swap(bspline.n_ctrlp, other.bspline.n_ctrlp);
+//         std::swap(bspline.n_knots, other.bspline.n_knots);
+//         std::swap(bspline.ctrlp, other.bspline.ctrlp);
+//         std::swap(bspline.knots, other.bspline.knots);
+//     }
+// }
+// #endif
 
 
 /********************************************************
